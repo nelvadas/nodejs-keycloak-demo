@@ -3,8 +3,10 @@ Secure Nodejs API With Keycloack
 
 
 ## Start a keycloak server
+```
 docker run -e DB_VENDOR=H2 -e KEYCLOAK_USER=admin -e \
-KEYCLOAK_PASSWORD=Admin1234 -p 8080:8080 --name keycloak-server -dit jboss/keycloak:8.0.2
+KEYCLOAK_PASSWORD=Admin1234 -p 8080:8080 --name keycloak-server -dit jboss/keycloak:8.0.2```
+
 
 [Keycloak tags are available here] (https://hub.docker.com/r/jboss/keycloak/tags)
 
@@ -19,7 +21,8 @@ Copy the secret key generated for this client  `076506a4-8b7a-45fb-95b5-3644a02b
 ### Get Access token
 
 
-    ```curl \
+```
+curl \
       -d "client_id=hellocanalous" \
       -d "client_secret=076506a4-8b7a-45fb-95b5-3644a02b8971" \
       -d "username=appuser" \
